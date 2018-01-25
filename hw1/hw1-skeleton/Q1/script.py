@@ -45,7 +45,7 @@ def getNextLevelFollowers(api, users_list, no_of_followers):
     # TODO: implement the method for fetching 'no_of_followers' followers for each user in users_list
     # rtype: list containing entries in the form of a tuple (follower, user)    
     next_level = [v for x,v in users_list]
-    next_level_followes = []
+    next_level_followers = []
     for user in next_level:
         user_name = api.get_user(user)
         user_followers = user_name.followers(count = no_of_followers)
@@ -64,7 +64,7 @@ def GatherAllEdges(api, root_user, no_of_neighbours):
     #        Question doc to know what Source node and Target node of an edge is in the case of Followers and Friends. 
     primary_friends = getPrimaryFriends(api, root_user, no_of_neighbours)
     next_level_friends = getNextLevelFriends(api, primary_friends , no_of_neighbours)
-    next_level_followers = getNextLevelFOllowers(api, primary_friends, no_of_neighbours)
+    next_level_followers = getNextLevelFollowers(api, primary_friends, no_of_neighbours)
     all_edges = primary_friends + next_level_friends + next_level_followers
     #Add code here to populate all_edges
     return all_edges
@@ -75,11 +75,11 @@ def writeToFile(data, output_file):
     # write data to output_file
     # rtype: None
     data = list(set(data))
-    with open('output_file.csv','wb') as f:
+    with open(output_file,'wb') as f:
         f_writer = csv.writer(f)
-        f.writerow(['Source','Target'])
+        f_writer.writerow(['Source','Target'])
         for row in data:
-            csv_out,writerow(row)
+            f_writer.writerow(row)
 
 """
 NOTE ON GRADING:
