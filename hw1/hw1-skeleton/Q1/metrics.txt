@@ -1,0 +1,10 @@
+Average node degree:1.110
+Diameter of the gragh:6
+Average path length:4.017
+Graph density:0.002
+
+Avergae node degree computes the average of the number of edges that are connected to each node, indicates how connective the graph is.
+Diameter of the graph is the longest path length between any two nodes which shows how far apart are the two most distant nodes.
+Avergate path length is the average graph path length between all pairs of nodes.
+Graph density is the ratio of the number of existing edges and the number of all possible edges between any two nodes, indicates how dense the graph is.
+ 
