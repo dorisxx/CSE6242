@@ -129,19 +129,33 @@ select '';
 
 -- (k) Create and import data into FTS table movie_overview.
 -- [insert sql statement(s) below]
-
+CREATE VIRTUAL TABLE movie_overview USING fts3(
+id integer,
+name text,
+year integer,
+overview text,
+popularity decimal
+);
+.import movie-overview.txt movie_overview
 
 -- (k) part 1
 -- [insert sql statement(s) below]
-
+SELECT 'count_over_view_in',COUNT(overview)
+FROM movie_overview 
+WHERE overview MATCH '^in* OR ^In*';
 
 select '';
 
 -- (k) part 2
 -- [insert sql statement(s) below]
-
+SELECT 'id',id
+FROM movie_overview
+WHERE overview MATCH 'love NEAR/7 city';
 
 select '';
 
 -- (k) part 3
 -- [insert sql statement(s) below]
+SELECT 'movie_name',name
+FROM movie_overview
+WHERE overview MATCH '^geo* OR ^Geo*';
