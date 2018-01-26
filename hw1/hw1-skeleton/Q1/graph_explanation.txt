@@ -1,0 +1,4 @@
+1. Use Force Atlas(Repulsion strength = 10000, Adjust by Sizes = True), Label Adjust Layout
+2. Filter Degree Range: 2-42, hide labels if not filtered.
+3. Calculate 'Average Path Length' and apply 'Betweenness Centrality' to nodes size ranking.
+4. Calculate Modularity and apply 'Modularity Class' for nodes partition color.
