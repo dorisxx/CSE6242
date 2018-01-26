@@ -1,0 +1,104 @@
+-- initial commands
+.headers off
+.separator ','
+
+-- (a) Import data
+-- [insert sql statement(s) below]
+CREATE TABLE athletes(
+id integer,
+sex text,
+dob text,
+height float,
+weight integer,
+nationality text
+);
+CREATE TABLE countries(
+country text,
+code text,
+population integer,
+gdp float
+);
+CREATE TABLE games(
+id integer,
+name text,
+nationatlity text,
+sport text,
+gold integer,
+silver integer,
+bronze integer
+);
+.mode csv
+.import athletes.csv athletes
+.import countries.csv countries
+.import games.csv games
+
+-- (b) Build indexes
+-- [insert sql statement(s) below]
+
+
+-- (c) Quick computation.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (d) Distinct Sports.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (e) Handling Empty Cells.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (f) Female Athletes.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (g) Fit Athletes
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (h) Percentages of Gold & Silver Medals.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (i) Creating a view.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (j) Count total pairs.
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (k) Create and import data into FTS table movie_overview.
+-- [insert sql statement(s) below]
+
+
+-- (k) part 1
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (k) part 2
+-- [insert sql statement(s) below]
+
+
+select '';
+
+-- (k) part 3
+-- [insert sql statement(s) below]
