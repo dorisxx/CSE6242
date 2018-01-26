@@ -34,7 +34,10 @@ bronze integer
 
 -- (b) Build indexes
 -- [insert sql statement(s) below]
-
+CREATE INDEX id_index ON athletes(id);
+CREATE INDEX nationality_index ON athletes(nationality);
+CREATE INDEX id_games_index ON games(id);
+CREATE INDEX code_index ON countries(code);
 
 -- (c) Quick computation.
 -- [insert sql statement(s) below]
