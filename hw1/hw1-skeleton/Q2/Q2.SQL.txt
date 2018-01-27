@@ -21,7 +21,7 @@ gdp float
 CREATE TABLE games(
 id integer,
 name text,
-nationatlity text,
+nationality text,
 sport text,
 gold integer,
 silver integer,
@@ -123,7 +123,7 @@ select '';
 -- (j) Count total pairs.
 -- [insert sql statement(s) below]
 SELECT 'count_total_pairs',COUNT(*)
-FROM gdp_metrics
+FROM gdp_metrics;
 
 select '';
 
