@@ -3,38 +3,23 @@
 count_usa_gold,139
 ""
 aquatics
-archery
 athletics
-badminton
 basketball
 boxing
-canoe
 cycling
-equestrian
-fencing
-football
-golf
 gymnastics
-hockey
 judo
-"modern pentathlon"
 rowing
-"rugby sevens"
-sailing
 shooting
-"table tennis"
-taekwondo
 tennis
 triathlon
-volleyball
-weightlifting
 wrestling
 ""
-full_country_name,China,sum_of_gold_medals,46
-full_country_name,India,sum_of_gold_medals,0
-full_country_name,"United States",sum_of_gold_medals,139
-full_country_name,Indonesia,sum_of_gold_medals,2
-full_country_name,Brazil,sum_of_gold_medals,37
+full_country_name,China,sum_of_medals,113
+full_country_name,India,sum_of_medals,2
+full_country_name,"United States",sum_of_medals,264
+full_country_name,Indonesia,sum_of_medals,4
+full_country_name,Brazil,sum_of_medals,51
 ""
 full_country_name,"United States",count_of_gold_winning_female_athletes,74
 full_country_name,Russia,count_of_gold_winning_female_athletes,38
