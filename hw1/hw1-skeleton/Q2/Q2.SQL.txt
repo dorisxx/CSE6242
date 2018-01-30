@@ -56,14 +56,14 @@ select '';
 SELECT DISTINCT sport FROM(
 SELECT sport, nationality, gold
 FROM games
-WHERE games.nationality = 'USA' AND 'gold'!= 0);
+WHERE games.nationality = 'USA' AND games.gold!= 0);
 
 select '';
 
 -- (e) Handling Empty Cells.
 -- [insert sql statement(s) below]
 UPDATE countries SET population = NULL where population = '';
-SELECT 'full_country_name',countries.country,'sum_of_gold_medals',SUM(games.gold)
+SELECT 'full_country_name',countries.country,'sum_of_medals',SUM(games.gold)+SUM(games.silver)+SUM(games.bronze)
 FROM countries, games
 WHERE (games.nationality = countries.code) AND (countries.population IS NOT NULL)
 GROUP BY countries.country
