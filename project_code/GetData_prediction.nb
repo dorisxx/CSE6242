@@ -1,0 +1,222 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      9346,        214]
+NotebookOptionsPosition[      8958,        200]
+NotebookOutlinePosition[      9301,        215]
+CellTagsIndexPosition[      9258,        212]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"SetDirectory", "[", "\"\<Wolfram Mathematica\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"SetSystemOptions", "[", 
+   RowBox[{"\"\<DataOptions\>\"", "\[Rule]", 
+    RowBox[{"\"\<ReturnQuantities\>\"", "\[Rule]", "False"}]}], "]"}], 
+  ";"}]}], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"b4f06140-5b3b-414d-9bd8-d2c3e4c837ce"],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"sheetname", " ", "=", " ", "\"\<texas_zips.csv\>\""}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"exportname", " ", "=", " ", 
+     RowBox[{"\"\<texas_features\>\"", "<>", "\"\<.csv\>\""}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"data", " ", "=", " ", 
+     RowBox[{"Import", "[", "sheetname", "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Props", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<MaxTemperature\>\"", ",", "\"\<MaxWindSpeed\>\"", ",", 
+       "\"\<MeanDewPoint\>\"", ",", "\"\<MeanHumidity\>\"", ",", 
+       "\"\<MeanPressure\>\"", ",", "\"\<MeanStationPressure\>\"", ",", 
+       "\"\<MeanTemperature\>\"", ",", "\"\<MeanVisibility\>\"", ",", 
+       "\"\<MeanWindChill\>\"", ",", "\"\<MeanWindSpeed\>\"", ",", 
+       "\"\<MinTemperature\>\"", ",", "\"\<WindGusts\>\""}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"OtherProps", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{
+      "\"\<Jan\>\"", ",", "\"\<Feb\>\"", ",", "\"\<Mar\>\"", ",", 
+       "\"\<Apr\>\"", ",", "\"\<May\>\"", ",", "\"\<Jun\>\"", ",", 
+       "\"\<Jul\>\"", ",", "\"\<Aug\>\"", ",", "\"\<Sept\>\"", ",", 
+       "\"\<Oct\>\"", ",", "\"\<Nov\>\"", ",", "\"\<Dec\>\"", ",", 
+       "\"\<Elevation\>\""}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"TotalProps", " ", "=", " ", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"{", 
+       RowBox[{"Props", ",", "OtherProps"}], "}"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"DataCollected", " ", "=", " ", 
+     RowBox[{"{", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Append", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"\"\<zipcode\>\"", ",", "\"\<Lat\>\"", ",", "\"\<Lon\>\""}],
+           "}"}], ",", "TotalProps"}], "]"}], "]"}], "}"}]}], ";"}], 
+   "\[IndentingNewLine]", "\n", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"GetData", "[", "prop_", "]"}], ":=", " ", 
+     RowBox[{"WeatherData", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"lat", ",", "lon"}], "}"}], ",", "prop", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"year", ",", "1", ",", "1"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"year", ",", "12", ",", "31"}], "}"}], ",", 
+         "\"\<Year\>\""}], "}"}], ",", "\"\<Value\>\""}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"i", " ", "=", " ", "2"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"While", "[", 
+     RowBox[{
+      RowBox[{"i", "\[LessEqual]", 
+       RowBox[{"Length", "[", "data", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"Print", "[", "i", "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"year", "=", " ", "2017"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"lat", "=", 
+        RowBox[{
+         RowBox[{"data", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "[", 
+         RowBox[{"[", "2", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"lon", " ", "=", " ", 
+        RowBox[{
+         RowBox[{"data", "[", 
+          RowBox[{"[", "i", "]"}], "]"}], "[", 
+         RowBox[{"[", "3", "]"}], "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+       RowBox[{"PropsCollected", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Map", "[", "GetData", "]"}], "[", "Props", "]"}], "/.", 
+          RowBox[{
+           RowBox[{"Missing", "[", "\"\<NotAvailable\>\"", "]"}], "\[Rule]", 
+           " ", "NA"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"Precipitation", " ", "=", 
+        RowBox[{
+         RowBox[{"WeatherData", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"lat", ",", "lon"}], "}"}], ",", 
+           "\"\<TotalPrecipitation\>\"", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"year", ",", "1", ",", "1"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"year", ",", "12", ",", "31"}], "}"}], ",", 
+             "\"\<Month\>\""}], "}"}], ",", "\"\<Value\>\""}], "]"}], "/.", 
+         RowBox[{
+          RowBox[{"Missing", "[", "\"\<NotAvailable\>\"", "]"}], "\[Rule]", 
+          " ", "NA"}]}]}], ";", "\[IndentingNewLine]", 
+       RowBox[{"elevation", " ", "=", " ", 
+        RowBox[{"WeatherData", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"lat", ",", "lon"}], "}"}], ",", "\"\<Elevation\>\""}], 
+         "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+       RowBox[{"allProps", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{"PropsCollected", ",", "Precipitation", ",", "elevation"}], 
+          "}"}], "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+       RowBox[{"ROW", " ", "=", " ", 
+        RowBox[{"Flatten", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"data", "[", 
+            RowBox[{"[", "i", "]"}], "]"}], ",", "allProps"}], "}"}], "]"}]}],
+        ";", "\[IndentingNewLine]", "\t", 
+       RowBox[{"DataCollected", " ", "=", " ", 
+        RowBox[{"Append", "[", 
+         RowBox[{"DataCollected", ",", "ROW"}], "]"}]}], ";", 
+       "\[IndentingNewLine]", 
+       RowBox[{"i", "++"}], ";"}]}], "]"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{"Export", "[", 
+    RowBox[{"exportname", ",", "DataCollected", ",", "\"\<CSV\>\""}], "]"}], 
+   "\[IndentingNewLine]"}]}]], "Input",
+ CellChangeTimes->{{3.7324784269466963`*^9, 3.7324784341391883`*^9}, 
+   3.7324844694779525`*^9, {3.732486593910063*^9, 3.732486685245555*^9}, {
+   3.7324867163055553`*^9, 3.7324867606238217`*^9}, {3.7324867922645583`*^9, 
+   3.7324868127801795`*^9}, {3.73248695015278*^9, 3.7324872324847207`*^9}, {
+   3.732487466358226*^9, 3.732487526056291*^9}, {3.73248758164748*^9, 
+   3.732487583787699*^9}, {3.7324876361013184`*^9, 3.732487654510395*^9}, {
+   3.7324877838539796`*^9, 3.7324877912359824`*^9}, {3.732487880372136*^9, 
+   3.7324879099748726`*^9}, {3.7324879607609997`*^9, 3.732487965294673*^9}, 
+   3.7324880499792566`*^9, {3.732488080653041*^9, 3.7324881119205284`*^9}, {
+   3.7324881967959538`*^9, 3.732488201232585*^9}, {3.7324882936166897`*^9, 
+   3.7324882957216215`*^9}, {3.7324883322713084`*^9, 3.732488332316966*^9}, {
+   3.7324891275979366`*^9, 3.732489127986188*^9}, {3.7324892182270355`*^9, 
+   3.7324892433953304`*^9}, {3.7324896802116275`*^9, 3.732489692442246*^9}, 
+   3.7324906333301573`*^9, {3.7324910524594707`*^9, 3.73249110940864*^9}, {
+   3.7324916650470653`*^9, 3.7324916666129894`*^9}, {3.732491710406124*^9, 
+   3.732491741036821*^9}, {3.7324918168167706`*^9, 3.732491817090899*^9}, {
+   3.732491892384597*^9, 3.7324919110312247`*^9}, {3.732492057712762*^9, 
+   3.732492076083433*^9}, 3.732492284384617*^9, {3.7324923967770386`*^9, 
+   3.732492402636697*^9}, {3.7324924660869865`*^9, 3.732492485573059*^9}, 
+   3.73249279672826*^9, {3.7324935201017475`*^9, 3.732493536330708*^9}, {
+   3.7324935971215143`*^9, 3.732493606078495*^9}, 3.732493757225628*^9, {
+   3.7324939207721696`*^9, 3.732493953595008*^9}, {3.7324940811919627`*^9, 
+   3.7324940813383536`*^9}, {3.7324941950874243`*^9, 3.732494344542984*^9}, {
+   3.7324943857432446`*^9, 3.7324945023380723`*^9}, {3.732494551148283*^9, 
+   3.732494590880328*^9}, {3.732555216636738*^9, 3.7325552178400292`*^9}, {
+   3.732555249015188*^9, 3.7325553243668833`*^9}, {3.732585637515952*^9, 
+   3.73258568841043*^9}, {3.73258577337236*^9, 3.732585828120305*^9}, 
+   3.732585872507139*^9, 3.7325859142896876`*^9, {3.7325859949280453`*^9, 
+   3.7325860000223293`*^9}, {3.732757469474945*^9, 3.7327574745330105`*^9}, {
+   3.732759001743916*^9, 3.7327591039664063`*^9}, {3.7327591366976376`*^9, 
+   3.7327591400781555`*^9}, {3.7327592673106613`*^9, 3.732759267448526*^9}, {
+   3.7327593842327857`*^9, 3.7327593887252607`*^9}},
+ CellLabel->"In[38]:=",ExpressionUUID->"0c08715f-1b8d-4e37-ba21-d16cc406cde6"]
+},
+WindowSize->{972, 752},
+WindowMargins->{{189, Automatic}, {18, Automatic}},
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 371, 8, 48, "Input",ExpressionUUID->"b4f06140-5b3b-414d-9bd8-d2c3e4c837ce"],
+Cell[932, 30, 8022, 168, 542, "Input",ExpressionUUID->"0c08715f-1b8d-4e37-ba21-d16cc406cde6"]
+}
+]
+*)
+
