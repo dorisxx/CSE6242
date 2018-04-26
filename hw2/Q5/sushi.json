@@ -1,0 +1,1871 @@
+{
+   "data": {
+      "itemID": "",
+      "name": "Sushi",
+      "style": "",
+      "majorGroup": "",
+      "parent": "",
+      "oiliness": "",
+      "eatFreq": "",
+      "price": "",
+      "shopFreq": ""
+   },
+   "height": 3,
+   "depth": 0,
+   "parent": null,
+   "id": "Sushi",
+   "children": [
+      {
+         "data": {
+            "itemID": "",
+            "name": "Seafood",
+            "style": "",
+            "majorGroup": "",
+            "parent": "Sushi",
+            "oiliness": "",
+            "eatFreq": "",
+            "price": "",
+            "shopFreq": ""
+         },
+         "height": 2,
+         "depth": 1,
+         "id": "Seafood",
+         "children": [
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Aomono",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Aomono",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "13",
+                        "name": "hamachi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.258497317",
+                        "eatFreq": "1.874776386",
+                        "price": "1.673058712",
+                        "shopFreq": "0.64"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hamachi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "18",
+                        "name": "saba",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.916322314",
+                        "eatFreq": "1.385330579",
+                        "price": "1.482900433",
+                        "shopFreq": "0.56"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "saba"
+                  },
+                  {
+                     "data": {
+                        "itemID": "21",
+                        "name": "aji",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.323809524",
+                        "eatFreq": "1.602116402",
+                        "price": "2.081313131",
+                        "shopFreq": "0.56"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "aji"
+                  },
+                  {
+                     "data": {
+                        "itemID": "23",
+                        "name": "kohada",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.702450408",
+                        "eatFreq": "1.148191365",
+                        "price": "1.052447552",
+                        "shopFreq": "0.52"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kohada"
+                  },
+                  {
+                     "data": {
+                        "itemID": "27",
+                        "name": "kanpachi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.583225806",
+                        "eatFreq": "1.572903226",
+                        "price": "2.461432507",
+                        "shopFreq": "0.44"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kanpachi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "32",
+                        "name": "iwashi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.11328125",
+                        "eatFreq": "1.345703125",
+                        "price": "1.340909091",
+                        "shopFreq": "0.32"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "iwashi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "34",
+                        "name": "shimaaji",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.228571429",
+                        "eatFreq": "1.244642857",
+                        "price": "2.688311688",
+                        "shopFreq": "0.28"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "shimaaji"
+                  },
+                  {
+                     "data": {
+                        "itemID": "39",
+                        "name": "sayori",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.801324503",
+                        "eatFreq": "1.022075055",
+                        "price": "1.819444444",
+                        "shopFreq": "0.24"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sayori"
+                  },
+                  {
+                     "data": {
+                        "itemID": "54",
+                        "name": "sanma",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.805194805",
+                        "eatFreq": "1.233766234",
+                        "price": "1.511111111",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sanma"
+                  },
+                  {
+                     "data": {
+                        "itemID": "73",
+                        "name": "buri",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "0.962406015",
+                        "eatFreq": "1.62406015",
+                        "price": "1.625",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "buri"
+                  },
+                  {
+                     "data": {
+                        "itemID": "87",
+                        "name": "tobiuo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.493506494",
+                        "eatFreq": "0.688311688",
+                        "price": "1.5",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tobiuo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "89",
+                        "name": "mamakari",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.345238095",
+                        "eatFreq": "0.523809524",
+                        "price": "2",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "mamakari"
+                  },
+                  {
+                     "data": {
+                        "itemID": "91",
+                        "name": "battera",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.675",
+                        "eatFreq": "1.1875",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "battera"
+                  },
+                  {
+                     "data": {
+                        "itemID": "96",
+                        "name": "hiramasa",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "1.970588235",
+                        "eatFreq": "1",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hiramasa"
+                  },
+                  {
+                     "data": {
+                        "itemID": "98",
+                        "name": "shishamo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Aomono",
+                        "oiliness": "2.16",
+                        "eatFreq": "0.613333333",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "shishamo"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Akami",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Akami",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "2",
+                        "name": "maguro",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.769559033",
+                        "eatFreq": "2.348506401",
+                        "price": "1.874724518",
+                        "shopFreq": "0.88"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "maguro"
+                  },
+                  {
+                     "data": {
+                        "itemID": "8",
+                        "name": "toro",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "0.551854656",
+                        "eatFreq": "2.057532173",
+                        "price": "4.485454545",
+                        "shopFreq": "0.8"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "toro"
+                  },
+                  {
+                     "data": {
+                        "itemID": "15",
+                        "name": "samon",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.271123491",
+                        "eatFreq": "2.04549675",
+                        "price": "1.51177399",
+                        "shopFreq": "0.64"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "samon"
+                  },
+                  {
+                     "data": {
+                        "itemID": "19",
+                        "name": "chu_toro",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "0.795193312",
+                        "eatFreq": "2.034482759",
+                        "price": "3.167568543",
+                        "shopFreq": "0.56"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "chu_toro"
+                  },
+                  {
+                     "data": {
+                        "itemID": "26",
+                        "name": "tekka_maki",
+                        "style": "0",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "2.247133758",
+                        "eatFreq": "1.878980892",
+                        "price": "1.57983683",
+                        "shopFreq": "0.44"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tekka_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "31",
+                        "name": "katsuo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.907915994",
+                        "eatFreq": "1.484652666",
+                        "price": "1.464814815",
+                        "shopFreq": "0.36"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "katsuo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "37",
+                        "name": "negi_toro",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.255639098",
+                        "eatFreq": "2.07518797",
+                        "price": "2.472943723",
+                        "shopFreq": "0.28"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "negi_toro"
+                  },
+                  {
+                     "data": {
+                        "itemID": "53",
+                        "name": "toro_samon",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "0.691489362",
+                        "eatFreq": "1.75177305",
+                        "price": "2.623106061",
+                        "shopFreq": "0.16"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "toro_samon"
+                  },
+                  {
+                     "data": {
+                        "itemID": "61",
+                        "name": "negi_toro_maki",
+                        "style": "0",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.260683761",
+                        "eatFreq": "2",
+                        "price": "2.362071846",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "negi_toro_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "76",
+                        "name": "zuke",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Akami",
+                        "oiliness": "1.486111111",
+                        "eatFreq": "1.375",
+                        "price": "2.125",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "zuke"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Shiromi",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Shiromi",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "11",
+                        "name": "tai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.990931575",
+                        "eatFreq": "1.700741962",
+                        "price": "2.261244019",
+                        "shopFreq": "0.76"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "20",
+                        "name": "hirame",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.993610224",
+                        "eatFreq": "1.616613419",
+                        "price": "3.069155844",
+                        "shopFreq": "0.56"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hirame"
+                  },
+                  {
+                     "data": {
+                        "itemID": "36",
+                        "name": "engawa",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.202",
+                        "eatFreq": "1.406",
+                        "price": "2.008658009",
+                        "shopFreq": "0.28"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "engawa"
+                  },
+                  {
+                     "data": {
+                        "itemID": "46",
+                        "name": "suzuki",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.653631285",
+                        "eatFreq": "1.120111732",
+                        "price": "3.133333333",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "suzuki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "55",
+                        "name": "hamo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.567839196",
+                        "eatFreq": "0.834170854",
+                        "price": "1.5",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hamo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "57",
+                        "name": "shirauo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "3.082568807",
+                        "eatFreq": "1.467889908",
+                        "price": "1.333333333",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "shirauo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "65",
+                        "name": "fugu",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "3.129032258",
+                        "eatFreq": "0.748387097",
+                        "price": "2.333333333",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "fugu"
+                  },
+                  {
+                     "data": {
+                        "itemID": "81",
+                        "name": "kue",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "1.970149254",
+                        "eatFreq": "0.432835821",
+                        "price": "3",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kue"
+                  },
+                  {
+                     "data": {
+                        "itemID": "82",
+                        "name": "sawara",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.375",
+                        "eatFreq": "0.897727273",
+                        "price": "2.666666667",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sawara"
+                  },
+                  {
+                     "data": {
+                        "itemID": "88",
+                        "name": "ishigakidai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.658823529",
+                        "eatFreq": "1.105882353",
+                        "price": "2",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ishigakidai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "95",
+                        "name": "karei",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shiromi",
+                        "oiliness": "2.6",
+                        "eatFreq": "1.094736842",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "karei"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Tare",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Tare",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "1",
+                        "name": "anago",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Tare",
+                        "oiliness": "0.926384365",
+                        "eatFreq": "1.990228013",
+                        "price": "1.992458678",
+                        "shopFreq": "0.88"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "anago"
+                  },
+                  {
+                     "data": {
+                        "itemID": "25",
+                        "name": "unagi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Tare",
+                        "oiliness": "0.544273908",
+                        "eatFreq": "1.426210153",
+                        "price": "2.237247475",
+                        "shopFreq": "0.48"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "unagi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "67",
+                        "name": "ana_kyu_maki",
+                        "style": "0",
+                        "majorGroup": "0",
+                        "parent": "Tare",
+                        "oiliness": "2.224637681",
+                        "eatFreq": "0.956521739",
+                        "price": "1.583333333",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ana_kyu_maki"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Clam/Shell",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Clam/Shell",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "10",
+                        "name": "hotategai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.34541249",
+                        "eatFreq": "1.785659214",
+                        "price": "1.772195641",
+                        "shopFreq": "0.76"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hotategai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "12",
+                        "name": "akagai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.516750419",
+                        "eatFreq": "1.327470687",
+                        "price": "3.332449495",
+                        "shopFreq": "0.72"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "akagai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "14",
+                        "name": "awabi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.526978417",
+                        "eatFreq": "1.089028777",
+                        "price": "3.646401515",
+                        "shopFreq": "0.64"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "awabi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "24",
+                        "name": "torigai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.535077289",
+                        "eatFreq": "1.11058264",
+                        "price": "2.125",
+                        "shopFreq": "0.48"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "torigai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "28",
+                        "name": "mirugai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.39055794",
+                        "eatFreq": "1",
+                        "price": "2.479166667",
+                        "shopFreq": "0.4"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "mirugai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "33",
+                        "name": "hokkigai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.569664903",
+                        "eatFreq": "1.084656085",
+                        "price": "2.293560606",
+                        "shopFreq": "0.32"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hokkigai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "51",
+                        "name": "sazae",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.41038961",
+                        "eatFreq": "0.896103896",
+                        "price": "1.446666667",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sazae"
+                  },
+                  {
+                     "data": {
+                        "itemID": "52",
+                        "name": "aoyagi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.49825784",
+                        "eatFreq": "0.919860627",
+                        "price": "1.7",
+                        "shopFreq": "0.16"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "aoyagi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "63",
+                        "name": "hamaguri",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.293023256",
+                        "eatFreq": "0.925581395",
+                        "price": "2",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hamaguri"
+                  },
+                  {
+                     "data": {
+                        "itemID": "66",
+                        "name": "tsubugai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.401408451",
+                        "eatFreq": "1.161971831",
+                        "price": "1.85",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tsubugai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "68",
+                        "name": "hiragai",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.496296296",
+                        "eatFreq": "0.948148148",
+                        "price": "2.5",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hiragai"
+                  },
+                  {
+                     "data": {
+                        "itemID": "77",
+                        "name": "himo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.259541985",
+                        "eatFreq": "0.79389313",
+                        "price": "1",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "himo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "86",
+                        "name": "himo_kyu_maki",
+                        "style": "0",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "2.711538462",
+                        "eatFreq": "0.5",
+                        "price": "1.5",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "himo_kyu_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "99",
+                        "name": "kaki",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Clam/Shell",
+                        "oiliness": "1.779220779",
+                        "eatFreq": "0.727272727",
+                        "price": "1.25",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kaki"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Squid/Octopus",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Squid/Octopus",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "3",
+                        "name": "ika",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Squid/Octopus",
+                        "oiliness": "2.688400824",
+                        "eatFreq": "2.043239533",
+                        "price": "1.515151515",
+                        "shopFreq": "0.92"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ika"
+                  },
+                  {
+                     "data": {
+                        "itemID": "5",
+                        "name": "tako",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Squid/Octopus",
+                        "oiliness": "3.08845888",
+                        "eatFreq": "1.717346234",
+                        "price": "1.384330144",
+                        "shopFreq": "0.76"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tako"
+                  },
+                  {
+                     "data": {
+                        "itemID": "30",
+                        "name": "geso",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Squid/Octopus",
+                        "oiliness": "2.331896552",
+                        "eatFreq": "1.150862069",
+                        "price": "1.018181818",
+                        "shopFreq": "0.4"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "geso"
+                  },
+                  {
+                     "data": {
+                        "itemID": "75",
+                        "name": "ika_nattou",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Squid/Octopus",
+                        "oiliness": "1.581081081",
+                        "eatFreq": "1.081081081",
+                        "price": "1.090909091",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ika_nattou"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Shrimp/Crab",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Shrimp/Crab",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "0",
+                        "name": "ebi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "2.728978008",
+                        "eatFreq": "2.138421734",
+                        "price": "1.838419913",
+                        "shopFreq": "0.84"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ebi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "9",
+                        "name": "amaebi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "1.913987138",
+                        "eatFreq": "2.068327974",
+                        "price": "1.924973418",
+                        "shopFreq": "0.76"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "amaebi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "17",
+                        "name": "shako",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "2.571850394",
+                        "eatFreq": "0.993110236",
+                        "price": "1.856565657",
+                        "shopFreq": "0.6"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "shako"
+                  },
+                  {
+                     "data": {
+                        "itemID": "22",
+                        "name": "kani",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "2.823732719",
+                        "eatFreq": "1.474654378",
+                        "price": "2.037878788",
+                        "shopFreq": "0.52"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kani"
+                  },
+                  {
+                     "data": {
+                        "itemID": "41",
+                        "name": "botanebi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "1.987179487",
+                        "eatFreq": "1.566239316",
+                        "price": "3.047474747",
+                        "shopFreq": "0.24"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "botanebi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "47",
+                        "name": "tarabagani",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "2.680327869",
+                        "eatFreq": "1.295081967",
+                        "price": "3.415151515",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tarabagani"
+                  },
+                  {
+                     "data": {
+                        "itemID": "79",
+                        "name": "kurumaebi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Shrimp/Crab",
+                        "oiliness": "2.424836601",
+                        "eatFreq": "1.68627451",
+                        "price": "3.2",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kurumaebi"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Roe",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Roe",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "6",
+                        "name": "ikura",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.264872521",
+                        "eatFreq": "1.979461756",
+                        "price": "2.695362718",
+                        "shopFreq": "0.88"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ikura"
+                  },
+                  {
+                     "data": {
+                        "itemID": "16",
+                        "name": "kazunoko",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "2.681818182",
+                        "eatFreq": "1.170948617",
+                        "price": "2.376767677",
+                        "shopFreq": "0.6"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kazunoko"
+                  },
+                  {
+                     "data": {
+                        "itemID": "42",
+                        "name": "tobiko",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "2.246973366",
+                        "eatFreq": "0.871670702",
+                        "price": "1.400378788",
+                        "shopFreq": "0.24"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tobiko"
+                  },
+                  {
+                     "data": {
+                        "itemID": "44",
+                        "name": "mentaiko",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.8125",
+                        "eatFreq": "1.023809524",
+                        "price": "1.496363636",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "mentaiko"
+                  },
+                  {
+                     "data": {
+                        "itemID": "49",
+                        "name": "komochi_konbu",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "2.244252874",
+                        "eatFreq": "0.787356322",
+                        "price": "2.166666667",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "komochi_konbu"
+                  },
+                  {
+                     "data": {
+                        "itemID": "50",
+                        "name": "tarako",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.878873239",
+                        "eatFreq": "0.946478873",
+                        "price": "1.16",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tarako"
+                  },
+                  {
+                     "data": {
+                        "itemID": "72",
+                        "name": "mentaiko_maki",
+                        "style": "0",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.869822485",
+                        "eatFreq": "1.017751479",
+                        "price": "1.25",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "mentaiko_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "92",
+                        "name": "kyabia",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.328947368",
+                        "eatFreq": "0.407894737",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kyabia"
+                  },
+                  {
+                     "data": {
+                        "itemID": "93",
+                        "name": "karasumi",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Roe",
+                        "oiliness": "1.706666667",
+                        "eatFreq": "0.466666667",
+                        "price": "1.727272727",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "karasumi"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Other Seafood",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Other Seafood",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "4",
+                        "name": "uni",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "0.813043478",
+                        "eatFreq": "1.643478261",
+                        "price": "3.28728191",
+                        "shopFreq": "0.88"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "uni"
+                  },
+                  {
+                     "data": {
+                        "itemID": "35",
+                        "name": "kanimiso",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "0.910091743",
+                        "eatFreq": "1.023853211",
+                        "price": "1.833333333",
+                        "shopFreq": "0.32"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kanimiso"
+                  },
+                  {
+                     "data": {
+                        "itemID": "59",
+                        "name": "ankimo",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "0.745762712",
+                        "eatFreq": "0.618644068",
+                        "price": "1.75",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ankimo"
+                  },
+                  {
+                     "data": {
+                        "itemID": "90",
+                        "name": "hoya",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "2.243243243",
+                        "eatFreq": "0.675675676",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "hoya"
+                  },
+                  {
+                     "data": {
+                        "itemID": "94",
+                        "name": "uni_kurage",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "1.444444444",
+                        "eatFreq": "0.569444444",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "uni_kurage"
+                  },
+                  {
+                     "data": {
+                        "itemID": "97",
+                        "name": "namako",
+                        "style": "1",
+                        "majorGroup": "0",
+                        "parent": "Other Seafood",
+                        "oiliness": "1.936708861",
+                        "eatFreq": "0.443037975",
+                        "price": "1.5",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "namako"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "data": {
+            "itemID": "",
+            "name": "Non-seafood",
+            "style": "",
+            "majorGroup": "",
+            "parent": "Sushi",
+            "oiliness": "",
+            "eatFreq": "",
+            "price": "",
+            "shopFreq": ""
+         },
+         "height": 2,
+         "depth": 1,
+         "id": "Non-seafood",
+         "children": [
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Egg",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Non-seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Egg",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "7",
+                        "name": "tamago",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Egg",
+                        "oiliness": "2.368070953",
+                        "eatFreq": "1.866223208",
+                        "price": "1.032467532",
+                        "shopFreq": "0.84"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "tamago"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Non-Fish Meat",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Non-seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Non-Fish Meat",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "62",
+                        "name": "gyusashi",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Non-Fish Meat",
+                        "oiliness": "1.145539906",
+                        "eatFreq": "0.873239437",
+                        "price": "2.036363636",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "gyusashi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "64",
+                        "name": "basashi",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Non-Fish Meat",
+                        "oiliness": "1.478632479",
+                        "eatFreq": "0.747863248",
+                        "price": "2.388888889",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "basashi"
+                  },
+                  {
+                     "data": {
+                        "itemID": "83",
+                        "name": "sasami",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Non-Fish Meat",
+                        "oiliness": "2.8",
+                        "eatFreq": "0.66",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sasami"
+                  },
+                  {
+                     "data": {
+                        "itemID": "84",
+                        "name": "kujira",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Non-Fish Meat",
+                        "oiliness": "1.257575758",
+                        "eatFreq": "0.545454545",
+                        "price": "2",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kujira"
+                  },
+                  {
+                     "data": {
+                        "itemID": "85",
+                        "name": "kamo",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Non-Fish Meat",
+                        "oiliness": "1.2875",
+                        "eatFreq": "0.5625",
+                        "price": "1.5",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kamo"
+                  }
+               ]
+            },
+            {
+               "data": {
+                  "itemID": "",
+                  "name": "Vegetables",
+                  "style": "",
+                  "majorGroup": "",
+                  "parent": "Non-seafood",
+                  "oiliness": "",
+                  "eatFreq": "",
+                  "price": "",
+                  "shopFreq": ""
+               },
+               "height": 1,
+               "depth": 2,
+               "id": "Vegetables",
+               "children": [
+                  {
+                     "data": {
+                        "itemID": "29",
+                        "name": "kappa_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.73054755",
+                        "eatFreq": "1.456772334",
+                        "price": "1.02",
+                        "shopFreq": "0.4"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kappa_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "38",
+                        "name": "nattou_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "1.652259332",
+                        "eatFreq": "1.381139489",
+                        "price": "1",
+                        "shopFreq": "0.28"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "nattou_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "40",
+                        "name": "takuwan_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.330254042",
+                        "eatFreq": "1.011547344",
+                        "price": "1.033333333",
+                        "shopFreq": "0.24"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "takuwan_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "43",
+                        "name": "inari",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "1.583832335",
+                        "eatFreq": "1.625748503",
+                        "price": "1",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "inari"
+                  },
+                  {
+                     "data": {
+                        "itemID": "45",
+                        "name": "sarada",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "2.47706422",
+                        "eatFreq": "1.4617737",
+                        "price": "1.2",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sarada"
+                  },
+                  {
+                     "data": {
+                        "itemID": "48",
+                        "name": "ume_shiso_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.377521614",
+                        "eatFreq": "1.129682997",
+                        "price": "1.04",
+                        "shopFreq": "0.2"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ume_shiso_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "56",
+                        "name": "nasu",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.182242991",
+                        "eatFreq": "0.668224299",
+                        "price": "1.166666667",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "nasu"
+                  },
+                  {
+                     "data": {
+                        "itemID": "58",
+                        "name": "nattou",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "1.534246575",
+                        "eatFreq": "1.337899543",
+                        "price": "1.291666667",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "nattou"
+                  },
+                  {
+                     "data": {
+                        "itemID": "60",
+                        "name": "kanpyo_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "2.821917808",
+                        "eatFreq": "1.214611872",
+                        "price": "1",
+                        "shopFreq": "0.12"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kanpyo_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "69",
+                        "name": "okura",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "2.374193548",
+                        "eatFreq": "0.625806452",
+                        "price": "1",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "okura"
+                  },
+                  {
+                     "data": {
+                        "itemID": "70",
+                        "name": "ume_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.29787234",
+                        "eatFreq": "1.226950355",
+                        "price": "1",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "ume_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "71",
+                        "name": "sarada_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "2.091463415",
+                        "eatFreq": "1.493902439",
+                        "price": "1",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "sarada_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "74",
+                        "name": "shiso_maki",
+                        "style": "0",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.496969697",
+                        "eatFreq": "1.048484848",
+                        "price": "1",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "shiso_maki"
+                  },
+                  {
+                     "data": {
+                        "itemID": "78",
+                        "name": "kaiware",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.413333333",
+                        "eatFreq": "0.793333333",
+                        "price": "1.15",
+                        "shopFreq": "0.08"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "kaiware"
+                  },
+                  {
+                     "data": {
+                        "itemID": "80",
+                        "name": "mekabu",
+                        "style": "1",
+                        "majorGroup": "1",
+                        "parent": "Vegetables",
+                        "oiliness": "3.051282051",
+                        "eatFreq": "0.807692308",
+                        "price": "1",
+                        "shopFreq": "0.04"
+                     },
+                     "height": 0,
+                     "depth": 3,
+                     "id": "mekabu"
+                  }
+               ]
+            }
+         ]
+      }
+   ]
+}

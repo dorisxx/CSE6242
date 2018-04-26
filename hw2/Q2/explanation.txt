@@ -1,0 +1,3 @@
+1.Use linear scale
+2.Set the minimal radius as 5
+3.Assign the radius as the minimal radius+weight*1.5

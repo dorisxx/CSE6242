@@ -1,0 +1,2 @@
+We want to use square root or log scale in charts when the data is likely in power functions like y to the power of n. 
+Using such scales would make the graph more like straight lines, and give better visual explanations.

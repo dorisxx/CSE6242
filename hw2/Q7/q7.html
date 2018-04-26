@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+  .names {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+  }
+
+    /* Tooltip CSS */
+    .d3-tipbox {
+    line-height: 1.5;
+    font-weight: 400;
+    font-family:"avenir next", Arial, sans-serif;
+    padding: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #FFA500;
+    border-radius: 1px;
+    pointer-events: none;
+    }
+
+    /* Creates a small triangle extender for the tooltip */
+    .d3-tipbox:after {      
+      box-sizing: border-box;
+      display: inline;
+      font-size: 8px;
+      width: 100%;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      pointer-events: none;
+      
+    }
+
+    /* Northward tooltips */
+    .d3-tipbox.n:after {
+      content: "\25BC";
+      margin: -1px 0 0 0;
+      top: 100%;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Eastward tooltips */
+    .d3-tipbox.e:after {
+      content: "\25C0";
+      margin: -4px 0 0 0;
+      top: 50%;
+      left: -8px;
+    }
+
+    /* Southward tooltips */
+    .d3-tipbox.s:after {
+      content: "\25B2";
+      margin: 0 0 1px 0;
+      top: -8px;
+      left: 0;
+      text-align: center;
+    }
+
+    /* Westward tooltips */
+    .d3-tipbox.w:after {
+      content: "\25B6";
+      margin: -4px 0 0 -1px;
+      top: 50%;
+      left: 100%;
+    }
+
+    .mono {
+      font-size: 8pt;
+      font-family: Consolas, courier;
+      font-weight:bold;
+      fill:black;
+    }
+
+/*    text{
+      pointer-events:none;
+    }*/
+
+    .details{
+      color:white;
+    }
+
+</style>
+<body>
+<script src="../lib/d3.v3.min.js"></script>
+<script src="../lib/d3-queue.v3.min.js"></script>
+<script src="../lib/topojson.v1.min.js"></script>
+<script src="../lib/d3.tip.v0.6.3.js"></script>
+<script>
+// Set tooltips
+var tip = d3.tip()
+            .attr('class', 'd3-tipbox')
+            .offset([-10, 0])
+            .html(function(d) {
+              return "<strong>Country: </strong><span class='details'>" + d[0] + "<br></span>" 
+              + "<strong>Population: </strong><span class='details'>" + d[1] +"<br></span>"
+              + "<strong>Literacy: </strong><span class='details'>" + d[2] +"</span>";
+            })
+
+var margin = {top: -200, right: 20, bottom: 30, left: 100},
+            width = 1600 - margin.left - margin.right,
+            height = 900 - margin.top - margin.bottom;
+
+var cellSize = 75;
+
+var color = d3.scale.threshold()
+    .domain([10000,100000,500000,1000000,5000000,10000000,50000000,100000000,500000000,1500000000])
+    .range(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]);
+
+var pop = ['Population:',10000,100000,500000,1000000,5000000,10000000,50000000,100000000,500000000,1500000000]
+var colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]
+var path = d3.geo.path();
+
+var svg = d3.select("body")
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append('g')
+            .attr('class', 'map');
+
+var projection = d3.geo.mercator()
+                   .scale(200)
+                  .translate( [width / 2, height / 1.5]);
+
+var path = d3.geo.path().projection(projection);
+
+svg.call(tip);
+
+d3.queue()
+    .defer(d3.json, "world_countries.json")
+    .defer(d3.tsv, "world_population.tsv")
+    .defer(d3.tsv,"literacy_rate.tsv")
+    .await(ready);
+
+function ready(error, data, population,literacy) {
+  var populationById = {};
+  var literacyById = {};
+  var dataset = {};
+  population.forEach(function(d) { populationById[d.id] = +d.population;});
+  literacy.forEach(function(d){literacyById[d.id] = +d.Rate;})
+
+  data.features.forEach(function(d){
+      dataset[d.id] = [d.properties.name,populationById[d.id],literacyById[d.id]]
+  });
+  
+
+  svg.append("g")
+      .attr("class", "countries")
+    .selectAll("path")
+      .data(data.features)
+    .enter().append("path")
+      .attr("d", path)
+      .style("fill", function(d) { return color(populationById[d.id]); })
+      .style('stroke', 'white')
+      .style('stroke-width', 1.5)
+      .style("opacity",0.8)
+      // tooltips
+        .style("stroke","white")
+        .style('stroke-width', 0.3)
+        .on('mouseover',function(d){
+          tip.show(dataset[d.id]);
+
+          d3.select(this)
+            .style("opacity", 1)
+            .style("stroke","white")
+            .style("stroke-width",3);
+        })
+        .on('mouseout', function(d){
+          tip.hide(d);
+
+          d3.select(this)
+            .style("opacity", 0.8)
+            .style("stroke","white")
+            .style("stroke-width",0.3);
+        });
+
+  svg.append("path")
+      .datum(topojson.mesh(data.features, function(a, b) { return a.id !== b.id; }))
+       // .datum(topojson.mesh(data.features, function(a, b) { return a !== b; }))
+      .attr("class", "names")
+      .attr("d", path);
+}
+
+  //add legend
+  
+  var legend = svg.selectAll(".legend")
+      .data(pop);
+
+      legend.enter().append("g")
+          .attr("class", "legend");
+
+      legend.append("rect")
+      .attr("x", function(d, i) {  return width/2.2+cellSize * i; })
+      .attr("y", height-100)
+      .attr("width", cellSize)
+      .attr("height", cellSize/4)
+      .style("stroke",function (d,i){ if(i==10){return "white";} else{return "black";} })
+      .style("fill", function(d, i) { if(i==10){return "white";} else{return colors[i];} });
+
+  
+
+      legend.append("text")
+      .text(function (d,i){if(i==0) {return d;} else {return d/1000000+'M';}})
+      .attr("class", "mono")
+      .attr("x", function(d, i) { return width/2.2+cellSize * (i); })
+      .attr("y", height-110)
+      .call(axis);
+
+
+</script>
+</body>
+</html>

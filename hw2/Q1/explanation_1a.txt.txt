@@ -1,0 +1,6 @@
+Made with Excel.
+1. Select relevent data.
+2. Align Columns.
+3. Change Font and Size.
+4. Add color padding.
+5. Save as png.

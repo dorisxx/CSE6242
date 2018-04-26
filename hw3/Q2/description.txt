@@ -1,0 +1,14 @@
+1.Parse each line and filter weight edges whose edge weights are larger or equal than 10.
+line19
+
+2. Calculate the average outging edge weight. First map each line as (src,(weight,1)), src is the key. Reduce by key and sum repective values, we now have the corresponding sum and count as values, now map them to calculate the average weight by dividing sum by count.
+line20-25
+
+3.Calculate the average ingoing edge weight. This time the key is tgt, map each line as (tgt,(weight,1)). The rest is the same as 2.
+line26-31
+
+4.Outer join to calculate the gross average node weight. 
+line32-35
+
+5.Save the output separated by \t.
+line36, 40

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dsnap - Charts</title>
+	<style>
+	#xaxis .domain {
+		fill:none;
+		stroke:#000;
+	}
+	#xaxis text, #yaxis text {
+		font-size: 14px;
+		fill:black
+	}
+	path { 
+		stroke: steelblue;
+		stroke-width: 2;
+		fill: none;
+	}
+
+	.axis path,
+	.axis line {
+		fill: none;
+		stroke: grey;
+		stroke-width: 1;
+		shape-rendering: crispEdges;
+	}
+
+	.container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+	}
+	</style>
+</head>
+<body>
+	<div class= "container">
+	<div id="wrapper",align = "left"></div>
+	<div id = "line"></div>
+
+	</div>
+	<script src="../lib/d3.v3.min.js" charset="utf-8"></script>
+	<script>
+		var categories= ['','Harry Potter', 'Transformers', 'Mission Impossible', 'Fast and the Furious', 'Hunger Games','Pirates of the Caribbean'];
+
+		var dollars = [7722,4374,2797,5339,2957,4502];
+
+        var revenue1 = [974, 878,796, 896, 942, 935, 960, 1341],
+            revenue2= [708, 836, 1123, 1104, 603 ],
+            revenue3=[457, 549, 397, 694, 700 ],
+            revenue4=[206, 236, 363, 363, 629, 789, 1516, 1237],
+            revenue5=[677, 864, 766, 650 ],
+            revenue6=[634, 1066, 963, 1045, 794]
+
+        
+
+		var grid = d3.range(25).map(function(i){
+			return {'y1':0,'y2':480};
+		});
+
+		var xscale = d3.scale.linear()
+						.domain([0,8000])
+						.range([0,722]);
+
+		var yscale = d3.scale.linear()
+						.domain([0,categories.length])
+						.range([0,480]);
+
+		var canvas = d3.select('#wrapper')
+						.append('svg')
+						.attr({'width':900,'height':550});
+
+		var grids = canvas.append('g')
+						  .attr('id','grid')
+						  .attr('transform','translate(150,10)')
+						  .selectAll('line')
+						  .data(grid)
+						  .enter()
+						  .append('line')
+						  .attr({'y1':function(d){ return d.y1; },
+								 'y2':function(d){ return d.y2; },
+							});
+
+		var	xAxis = d3.svg.axis();
+			xAxis
+				.orient('bottom')
+				.scale(xscale)
+
+
+		var	yAxis = d3.svg.axis();
+			yAxis
+				.orient('left')
+				.scale(yscale)
+				.tickSize(1)
+				.tickFormat(function(d,i){ return categories[i]; })
+				.tickValues(d3.range(17));
+
+		var y_xis = canvas.append('g')
+						  .attr("transform", "translate(150,-35)")
+						  .attr('id','yaxis')
+						  .attr("fill","white")
+						  .call(yAxis);
+
+		var chart = canvas.append('g')
+							.attr("transform", "translate(150,0)")
+							.attr('id','bars')
+							.selectAll('rect')
+							.data(dollars)
+							.enter()
+							.append('rect')
+							.attr('height',35)
+							.attr({'x':0,'y':function(d,i){ return yscale(i)+19; }})
+							.attr('fill',"blue")
+							.on("mouseover",line_graph)
+							.on("mouseout",handleMouseOut)
+							.attr('width',function(d){ return 0; });
+
+
+		var transit = d3.select("svg").selectAll("rect")
+						    .data(dollars)
+						    .transition()
+						    .duration(1000) 
+						    .attr("width", function(d) {return xscale(d); });
+
+		var transitext = d3.select('#bars')
+							.selectAll('text')
+							.data(dollars)
+							.enter()
+							.append('text')
+							.attr({'x':function(d) {return 10; },'y':function(d,i){ return yscale(i)+35; }})
+							.text(function(d){ return "$"+d; }).style({'fill':'#fff','font-size':'14px'});
+		
+
+	
+			
+
+		function line_graph(d,i){
+		// Adds the svg canvas
+		d3.select(this).attr({fill:"red"});
+
+		var revenue = [revenue1,revenue2,revenue3,revenue4,revenue5,revenue6]
+
+
+		//Create the line chart
+		var margin = {top: 30, right: 20, bottom: 100, left: 100},
+		width = 400 - margin.left - margin.right,
+		height = 270 - margin.top - margin.bottom;
+
+		// Set the ranges
+		var x = d3.scale.linear().range([0, width]);
+		var y = d3.scale.linear().range([height, 0]);
+
+		// Define the axes
+		var xAxis = d3.svg.axis().scale(x)
+			.orient("bottom").tickValues(d3.range(1,10,1)).tickFormat(d3.format("d"));
+
+		var yAxis = d3.svg.axis().scale(y)
+			.orient("left").ticks(5);
+
+		// Define the line
+		var valueline = d3.svg.line()
+			.x(function(d,i) { return x(i+1); })
+			.y(function(d) { return y(d); });
+		var svg2 = d3.select("#line")
+			.append("svg")
+				.attr("width", width + margin.left + margin.right)
+				.attr("height", height + margin.top + margin.bottom)
+			.append("g")
+				.attr("transform", 
+					"translate(" + margin.left + "," + margin.top + ")");
+		
+		
+		// Scale the range of the data
+		x.domain([1, d3.max(revenue[i], function(d,i) { return i+1; })]);
+		y.domain([0, d3.max(revenue[i], function(d) { return d; })]);
+
+		// Add the valueline path.
+		svg2.append("path")
+			.attr("class", "line")
+			.attr("d", valueline(revenue[i]));
+
+		// Add the X Axis
+		svg2.append("g")
+			.attr("class", "x axis")
+			.attr("transform", "translate(0," + height + ")")
+			.call(xAxis);
+
+		// Add the Y Axis
+		svg2.append("g")
+			.attr("class", "y axis")
+			.call(yAxis);
+
+		//Add x label
+		svg2.append("text")
+        .attr("transform", "translate("+(width/2)+","+(height+margin.bottom/2)+")")
+        .style("text-anchor","middle")
+        .style("font-size","18px")
+        .text("Movie");
+
+		//Add y label
+		svg2.append("text")
+			.attr("transform","rotate(-90)")
+			.attr("y",0-margin.left/1.2)
+			.attr("x",-(height/2))
+			.attr("dy","1em")
+			.style("text-anchor","middle")
+			.style("font-size","18px")
+			.text("Revenue");
+		}
+
+		function handleMouseOut(d,i){
+		d3.select(this).attr({fill:"blue"});
+		document.getElementById("line").innerHTML = '';
+		}
+
+
+	</script>
+</body>
+</html>

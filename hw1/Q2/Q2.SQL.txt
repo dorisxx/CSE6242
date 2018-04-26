@@ -1,0 +1,161 @@
+-- initial commands
+.headers off
+.separator ','
+
+-- (a) Import data
+-- [insert sql statement(s) below]
+CREATE TABLE athletes(
+id integer,
+sex text,
+dob text,
+height float,
+weight integer,
+nationality text
+);
+CREATE TABLE countries(
+country text,
+code text,
+population integer,
+gdp float
+);
+CREATE TABLE games(
+id integer,
+name text,
+nationality text,
+sport text,
+gold integer,
+silver integer,
+bronze integer
+);
+.mode csv
+.import athletes.csv athletes
+.import countries.csv countries
+.import games.csv games
+
+select '';
+
+-- (b) Build indexes
+-- [insert sql statement(s) below]
+CREATE INDEX id_index ON athletes(id);
+CREATE INDEX nationality_index ON athletes(nationality);
+CREATE INDEX id_games_index ON games(id);
+CREATE INDEX code_index ON countries(code);
+
+select '';
+
+-- (c) Quick computation.
+-- [insert sql statement(s) below]
+SELECT 'count_usa_gold',SUM(games.gold)
+FROM games
+WHERE games.nationality = 'USA';
+
+select '';
+
+-- (d) Distinct Sports.
+-- [insert sql statement(s) below]
+SELECT DISTINCT sport FROM(
+SELECT sport, nationality, gold
+FROM games
+WHERE games.nationality = 'USA' AND games.gold!= 0);
+
+select '';
+
+-- (e) Handling Empty Cells.
+-- [insert sql statement(s) below]
+UPDATE countries SET population = NULL where population = '';
+SELECT 'full_country_name',countries.country,'sum_of_medals',SUM(games.gold)+SUM(games.silver)+SUM(games.bronze)
+FROM countries, games
+WHERE (games.nationality = countries.code) AND (countries.population IS NOT NULL)
+GROUP BY countries.country
+ORDER BY countries.population DESC
+LIMIT 5;
+
+select '';
+
+-- (f) Female Athletes.
+-- [insert sql statement(s) below]
+SELECT 'full_country_name',countries.country,'count_of_gold_winning_female_athletes',COUNT(athletes.sex) as c
+FROM countries,athletes,games
+WHERE athletes.id = games.id AND games.gold != 0 AND athletes.sex = 'female' AND countries.code = athletes.nationality
+GROUP BY countries.country
+ORDER BY c DESC
+LIMIT 5;
+
+
+select '';
+
+-- (g) Fit Athletes
+-- [insert sql statement(s) below]
+SELECT 'athlete_name',games.name, 'BMI',(athletes.weight/athletes.height/athletes.height) as bmi
+FROM athletes,games
+WHERE athletes.id = games.id AND (bmi BETWEEN 18.5 AND 24.9)
+ORDER BY games.name, bmi
+LIMIT 10;
+
+select '';
+
+-- (h) Percentages of Gold & Silver Medals.
+-- [insert sql statement(s) below]
+SELECT 'full_country_name',countries.country,'gold_medal_percentage',SUM(games.gold)*100/(SELECT SUM(games.gold) FROM games) as g,'silver_medal_percentage',SUM(games.silver)*100/(SELECT SUM(games.silver) FROM games) as s
+FROM games, countries
+WHERE games.nationality = countries.code
+GROUP BY countries.country
+ORDER BY g DESC, s DESC
+LIMIT 20;
+
+
+select '';
+
+-- (i) Creating a view.
+-- [insert sql statement(s) below]
+CREATE VIEW gdp_metrics AS
+SELECT 'full_country1_name',A.country as full_country1_name,'full_country2_name', B.country as full_country2_name,'diff',(A.gdp-B.gdp) as diff
+FROM countries A, countries B
+WHERE (A.gdp- B.gdp) >0.0 AND (A.gdp-B.gdp)<=100.0;
+
+SELECT * 
+FROM gdp_metrics
+ORDER BY gdp_metrics.diff DESC
+LIMIT 5;
+
+select '';
+
+-- (j) Count total pairs.
+-- [insert sql statement(s) below]
+SELECT 'count_total_pairs',COUNT(*)
+FROM gdp_metrics;
+
+select '';
+
+-- (k) Create and import data into FTS table movie_overview.
+-- [insert sql statement(s) below]
+CREATE VIRTUAL TABLE movie_overview USING fts4(
+id integer,
+name text,
+year integer,
+overview text,
+popularity decimal
+);
+.import movie-overview.txt movie_overview
+
+-- (k) part 1
+-- [insert sql statement(s) below]
+SELECT 'count_over_view_in',COUNT(overview)
+FROM movie_overview 
+WHERE overview MATCH '^in';
+
+select '';
+
+-- (k) part 2
+-- [insert sql statement(s) below]
+SELECT 'id',id
+FROM movie_overview
+WHERE overview MATCH 'love NEAR/7 city';
+
+select '';
+
+-- (k) part 3
+-- [insert sql statement(s) below]
+SELECT 'movie_name',name
+FROM movie_overview
+WHERE overview MATCH '^geo* OR ^Geo*';

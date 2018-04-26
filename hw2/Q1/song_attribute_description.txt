@@ -1,0 +1,44 @@
+Source:
+http://www.student.dtu.dk/~s093020/dataAnalysisWebsite/#dataHeader
+http://www.kaggle.com/c/Eurovision2010/data
+http://developer.echonest.com/raw_tutorials/faqs/faq_04.html
+
+Column A - Year of competition
+Column B - Competitor country 
+Column C - Region of competitor country (please see 'Region Classifications' below)
+Column D - Name of performing artist
+Column E - Name of song
+Column F - Gender of artist (nb: this is designated as "male" or "female" or "both" if a mixed-gender group)
+Column G - Group or solo performer
+Column H - Place achieved in final
+Column I - Total points received by competing country, an aggregate of votes
+Column J - If this is a final/ semi-final
+Column K - Is the song in English
+Column L - Song quality
+Column M - Number of points divided by total number of points in competition
+Column N - Energy
+Column O - Duration of the song
+Column P - Acousticness
+Column Q - Danceability
+Column R - Tempo represents the beats per minute(BPM) of the song
+Column S - Speechiness 
+Column T - The key that The Echo Nest believes the song is in. Key signatures start at 0 (C) and ascend the chromatic scale. 
+Column U - Liveness
+Column V - Time signature of the key; how many beats per measure.
+Column W - Mode - Number representing whether the song is in a minor (0) or major (1) key. Use this in conjunction with 'key'.
+Column X - Loudness
+Column Y - Valence
+Column Z - Happiness
+
+Details of the Acoustic properties(Danceability, Liveness, Acousticness, Valence, Energy, Speechiness) can be found on this link: http://developer.echonest.com/acoustic-attributes.html 
+
+
+Region classifications
+
+The countries are classified by region as follows:
+
+Scandinavia - Denmark, Finland, Iceland, Norway, Sweden
+Western Europe - Andorra, Austria, Belgium, France, Germany, Greece, Italy, Luxembourg, Malta, Monaco, Netherlands, Portugal, San Marino, Spain, Switzerland
+Independent - Cyprus, Ireland, Israel, Turkey, United Kingdom
+Former Socialist Bloc - Albania, Armenia, Azerbaijan, Belarus, Bulgaria, Czech Republic, Estonia, Georgia, Hungary, Latvia, Lithuania, Moldova, Poland, Romania, Russia, Slovakia, Ukraine
+Former Yugoslavia - Bosnia and Herzegovina, Croatia, Kosovo, Macedonia, Montenegro / Serbia and Montenegro / Serbia, Slovenia

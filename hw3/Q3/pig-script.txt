@@ -1,0 +1,8 @@
+bigrams = LOAD 's3://cse6242-2018spring-aws-big/*' AS (bigram:chararray, year:int, occurrences:int, books:int);
+
+bigrams = FILTER bigrams BY occurrences>=400 AND books>=8;
+grp = GROUP bigrams BY bigram;
+average = FOREACH grp GENERATE group AS gram, ROUND((SUM(bigrams.occurrences)/(double)SUM(bigrams.books))*100.0)/100.0 AS value;
+result = ORDER average BY value DESC,gram ASC;
+result = LIMIT result 15;
+STORE result INTO 's3://cse6242-sxiang36/pig-output' USING PigStorage('\t');

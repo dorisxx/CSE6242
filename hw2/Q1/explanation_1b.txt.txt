@@ -1,0 +1,5 @@
+1.Select data from song.csv.
+2.Connect to Tableau.
+3.Put Attributes to columns and song to rows in Tableau.
+4.Set colors and font.
+5.Export png.

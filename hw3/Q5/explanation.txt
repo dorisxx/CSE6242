@@ -1,0 +1,3 @@
+The errors decrease and the accuracy increases after applying boosted decision tree regression.
+
+The algorithm forms an ensemble of weak prediction models, which tend to decrease the bias for a little variance. Thus, boosting in a decision tree ensemble tends to improve accuracy.

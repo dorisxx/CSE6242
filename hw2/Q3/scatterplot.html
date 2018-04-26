@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8">
+<style>
+.pagebreak { page-break-before: always; } 
+body {
+  font: 10px sans-serif;
+}
+h1 { text-decoration: underline; }
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.point {
+  fill: white;
+}
+.legend{
+    
+    padding: 5px;
+    font: 10px sans-serif;
+
+}
+
+</style>
+<script src="../lib/d3.v3.min.js"></script>
+<script>
+draw("#graph1",1)
+draw("#graph2",2)
+draw("#graph3",1,3)
+draw("#graph4",4)
+draw("#graph5",5)
+function draw(selector, n,k){
+var margin = {top: 60, right: 20, bottom: 60, left: 60},
+    width = 880 - margin.left - margin.right,
+    height = 720- margin.top - margin.bottom;
+
+var x = d3.scale.linear()
+    .range([0, width]);
+
+var y;
+var r = d3.scale.linear()
+    .range([210,10])
+
+d3.csv("wine_quality.csv", function(data) {
+  // Coerce the strings to numbers.
+  data.forEach(function(d) {
+    if (n==1){
+        d.x = +d.alcohol
+        d.y = +d.pH
+        d.v = +d.quality
+    }
+    if(n==2){ 
+        d.x = +d.residual_sugar
+        d.y = +d.pH
+        d.v = +d.quality
+    }
+    if(n==4 || n==5){
+        d.x = +d.pH
+        d.y = +d.sulphates
+        d.v = +d.quality
+    }
+  });
+
+x.domain([0,d3.max(data,function(d){return d.x})]);
+function y_scale(t){
+    if(t==4){
+        y= d3.scale.sqrt().range([height, 0]).domain(d3.extent(data, function(d){return d.y}))
+    }
+    if(t==5){
+        y= d3.scale.log().range([height, 0]).domain(d3.extent(data, function(d){return d.y}))
+    }
+    if(t==1 || t==2){
+        y=d3.scale.linear().range([height, 0]).domain([0,d3.max(data,function(d){return d.y})]);
+    }
+}
+y_scale(n)
+//y.domain([0,d3.max(data,function(d){return d.y})]);
+r.domain(d3.extent(data, function(d){return d.x*d.y}))
+
+var svg = d3.select(selector).append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+  // Add the x-axis.
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.svg.axis().scale(x).orient("bottom"));
+ //Add x-axis label
+  svg.append("text")
+        .attr("transform", "translate("+(width/2)+","+(height+40)+")")
+        .style("text-anchor","middle")
+        .style("font-size","18px")
+        .text(function(d){if(n==1){return "Alcohol"} if(n==2){return "Residual Sugar"} if(n==4||n==5){return "pH"}});
+
+  // Add the y-axis.
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(d3.svg.axis().scale(y).orient("left"));
+  //Add y-axis label
+  svg.append("text")
+        .attr("transform","rotate(-90)")
+        .attr("y",0-margin.left-5)
+        .attr("x",0-(height/2))
+        .attr("dy","1em")
+        .style("text-anchor","middle")
+        .style("font-size","16px")
+        .text(function(d){if(n==1||n==2){return "pH"} if(n==4||n==5){return "Sulphates"}});
+
+  // Add the points!
+  svg.selectAll(".point")
+      .data(data)
+    .enter().append("path")
+      .attr("class", "point")
+      .attr("d", d3.svg.symbol().type(function (d){if(d.v>=6) {return "cross"} else {return "circle"};})
+                                .size(function(d){if(k==3) return r(d.y*d.x); else{return "70"}}))
+      .attr("stroke",function(d){if (d.v>=6) {return "blue"} else {return "red"};})
+      .attr("transform", function(d) { return "translate(" + x(d.x) + "," + y(d.y) + ")"; });
+
+  var qualities = ["Good","Bad"];
+  var q_text = {"Good":"cross","Bad":"circle"};
+  var q_color = {"Good":"blue","Bad":"red"}
+  //draw legend
+  var legend = svg.selectAll(".legend")
+        .data(qualities)
+        .enter().append("g")
+        .attr("class","legend")
+        .attr("transform", function(d, i) { return "translate(0," + i * 20 + ")"; });
+    
+    legend.append("path")
+                    .attr("transform", "translate(712, -40)")
+                    .attr("d",d3.svg.symbol().type(function (d){return q_text[d]}))
+                    .style("stroke",function(d){return q_color[d]})
+                    .style("fill","white");
+                
+    legend.append("text")
+            .attr("x", 720)
+            .attr("y", -40)
+            .attr("dy", ".35em")
+            .style("text-anchor", "start")
+            .style("font-size","16px")
+            .text(function(d){return d});
+
+});
+}
+</script>
+</head>
+<body>
+<h1>pH vs. Alcohol</h1>
+<div id = "graph1"></div>
+<div class="pagebreak"> </div>
+<h1>pH vs. Residual Sugar</h1>
+<div id = "graph2"></div>
+<div class="pagebreak"> </div>
+<h1>pH vs. Alcohol (scaled symbols)</h1>
+<div id = "graph3"></div>
+<div class="pagebreak"> </div>
+<h1>Sulphates vs. pH(square-root-scaled)</h1>
+<div id = "graph4"></div>
+<div class="pagebreak"> </div>
+<h1>Sulphates vs. pH(log-scaled)</h1>
+<div id = "graph5"></div>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+id	Country	Rate
+AFG	Afghanistan	32
+ALB	Albania	97
+DZA	Algeria	73
+AND	Andorra	-
+AGO	Angola	71
+ATG	Antigua and Barbuda	99
+ARG	Argentina	98
+ARM	Armenia	100
+AUS	Australia	-
+AUT	Austria	-
+AZE	Azerbaijan	100
+BHS	Bahamas	-
+BHR	Bahrain	95
+BGD	Bangladesh	60
+BRB	Barbados	-
+BLR	Belarus	100
+BEL	Belgium	-
+BLZ	Belize	-
+BEN	Benin	29
+BTN	Bhutan	53
+BOL	Bolivia (Plurinational State of)	92
+BIH	Bosnia and Herzegovina	98
+BWA	Botswana	87
+BRA	Brazil	90
+BRN	Brunei Darussalam	96
+BGR	Bulgaria	98
+BFA	Burkina Faso	29
+BDI	Burundi	87
+CPV	Cabo Verde	85
+KHM	Cambodia	74
+CMR	Cameroon	71
+CAN	Canada	-
+CAF	Central African Republic	37
+TCD	Chad	38
+CHL	Chile	97
+CHN	China	95
+COL	Colombia	93
+COM	Comoros	77
+COG	Congo	79
+COK	Cook Islands	-
+CRI	Costa Rica	97
+CIV	Côte d'Ivoire	41
+HRV	Croatia	99
+CUB	Cuba	100
+CYP	Cyprus	99
+CZE	Czech Republic	-
+PRK	Democratic People's Republic of Korea	100
+COD	Democratic Republic of the Congo	75
+DNK	Denmark	-
+DJI	Djibouti	-
+DMA	Dominica	-
+DOM	Dominican Republic	90
+ECU	Ecuador	92
+EGY	Egypt	72
+SLV	El Salvador	84
+GNQ	Equatorial Guinea	95
+ERI	Eritrea	72
+EST	Estonia	100
+ETH	Ethiopia	39
+FJI	Fiji	-
+FIN	Finland	-
+FRA	France	-
+GAB	Gabon	82
+GMB	Gambia	53
+GEO	Georgia	100
+DEU	Germany	-
+GHA	Ghana	71
+GRC	Greece	97
+GRD	Grenada	-
+GTM	Guatemala	78
+GIN	Guinea	25
+GNB	Guinea-Bissau	58
+GUY	Guyana	85
+HTI	Haiti	49
+VAT	Holy See	-
+HND	Honduras	85
+HUN	Hungary	99
+ISL	Iceland	-
+IND	India	69
+IDN	Indonesia	93
+IRN	Iran (Islamic Republic of)	84
+IRQ	Iraq	79
+IRL	Ireland	-
+ISR	Israel	-
+ITA	Italy	99
+JAM	Jamaica	88
+JPN	Japan	-
+JOR	Jordan	93
+KAZ	Kazakhstan	100
+KEN	Kenya	72
+KIR	Kiribati	-
+KWT	Kuwait	96
+KGZ	Kyrgyzstan	99
+LAO	Lao People's Democratic Republic	73
+LVA	Latvia	100
+LBN	Lebanon	90
+LSO	Lesotho	76
+LBR	Liberia	43
+LBY	Libya	90
+LIE	Liechtenstein	-
+LTU	Lithuania	100
+LUX	Luxembourg	-
+MDG	Madagascar	64
+MWI	Malawi	61
+MYS	Malaysia	93
+MDV	Maldives	98
+MLI	Mali	31
+MLT	Malta	93
+MHL	Marshall Islands	-
+MRT	Mauritania	46
+MUS	Mauritius	89
+MEX	Mexico	93
+FSM	Micronesia (Federated States of)	-
+MCO	Monaco	-
+MNG	Mongolia	98
+MNE	Montenegro	98
+MAR	Morocco	67
+MOZ	Mozambique	51
+MMR	Myanmar	93
+NAM	Namibia	76
+NRU	Nauru	-
+NPL	Nepal	60
+NLD	Netherlands	-
+NZL	New Zealand	-
+NIC	Nicaragua	78
+NER	Niger	15
+NGA	Nigeria	51
+NIU	Niue	-
+NOR	Norway	-
+OMN	Oman	87
+PAK	Pakistan	55
+PLW	Palau	100
+PAN	Panama	94
+PNG	Papua New Guinea	63
+PRY	Paraguay	94
+PER	Peru	94
+PHL	Philippines	95
+POL	Poland	100
+PRT	Portugal	94
+QAT	Qatar	96
+KOR	Republic of Korea	-
+MDA	Republic of Moldova	99
+ROU	Romania	99
+RUS	Russian Federation	100
+RWA	Rwanda	66
+KNA	Saint Kitts and Nevis	-
+LCA	Saint Lucia	-
+VCT	Saint Vincent and the Grenadines	-
+WSM	Samoa	99
+SMR	San Marino	-
+STP	Sao Tome and Principe	70
+SAU	Saudi Arabia	94
+SEN	Senegal	52
+SRB	Serbia	98
+SYC	Seychelles	94
+SLE	Sierra Leone	46
+SGP	Singapore	96
+SVK	Slovakia	-
+SVN	Slovenia	100
+SLB	Solomon Islands	-
+SOM	Somalia	-
+ZAF	South Africa	93
+SSD	South Sudan	27
+ESP	Spain	98
+LKA	Sri Lanka	91
+PSE	State of Palestine	95
+SDN	Sudan	74
+SUR	Suriname	95
+SWZ	Swaziland	83
+SWE	Sweden	-
+CHE	Switzerland	-
+SYR	Syrian Arab Republic	86
+TJK	Tajikistan	100
+THA	Thailand	96
+MKD	The former Yugoslav Republic of Macedonia	98
+TLS	Timor-Leste	58
+TGO	Togo	60
+TON	Tonga	99
+TTO	Trinidad and Tobago	99
+TUN	Tunisia	79
+TUR	Turkey	93
+TKM	Turkmenistan	100
+TUV	Tuvalu	-
+UGA	Uganda	73
+UKR	Ukraine	100
+ARE	United Arab Emirates	90
+GBR	United Kingdom	-
+TZA	United Republic of Tanzania	68
+USA	United States	-
+URY	Uruguay	98
+UZB	Uzbekistan	100
+VUT	Vanuatu	84
+VEN	Venezuela (Bolivarian Republic of)	95
+VNM	Viet Nam	94
+YEM	Yemen	68
+ZMB	Zambia	61
+ZWE	Zimbabwe	84

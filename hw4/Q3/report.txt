@@ -1,0 +1,84 @@
+
+****************************************
+Part A
+
+Linear Regression - 
+	Training Accuracy: 0.861
+	Testing Accuracy: 0.824
+
+SVM -
+	Training Accuracy: 1.0
+	Testing Accuracy: 0.802
+
+MLP - 
+	Training Accuracy: 0.988
+	Testing Accuracy: 0.798
+
+Random Forest - 
+	Training Accuracy: 0.998
+	Testing Accuracy: 0.962
+
+****************************************
+Part B - Hyperparameter tuning
+
+Random Forest - 
+	n_estimators: 
+		What it does (at most 25 words):it defines the number of trees to be used in the forest
+		Values tested (at least 3): 10,100,500,1000
+
+	max_depth: 
+		What it does:it defines the maximum depth of the tree
+		Values tested (at least 3): None,4,5,6,7,8
+		
+	Best combination of parameter values:
+		n_estimators: 1000
+		max_depth: None
+
+	Testing Accuracy before tuning (default parameters):0.962
+	Testing Accuracy after tuning:0.962
+
+
+SVM -
+	Kernels: 
+		What it does:it maps features to higher dimensional space so that they're more linear separable. 
+		Values tested: rbf, linear
+	C: 
+		What it does:it defines the margin of the hyperplane, thus measuress how tolerant you are to misclassifications.
+		Values tested (at least 3): 0.001,0.01,0.1,1,10,100,1000
+		
+	Best combination of parameter values: 
+		Kernel: rbf
+		C: 1000
+	
+	Testing Accuracy before tuning  (default parameters):0.802
+	Testing Accuracy after tuning:0.803
+
+
+****************************************
+Part C
+
+For your SVM's CV run from part B, state the highest mean testing accuracy 
+across the sets of parameter values and its corresponding mean train score and mean fit time. 
+
+SVM's highest mean testing/cross-validated accuracy: 94%
+SVM's mean train score: 95%
+SVM's mean fit time: 0.471s
+
+****************************************
+Part D
+
+Tuned SVM's testing accuracy BEFORE preprocessing: 0.802
+Tuned SVM's testing accuracy AFTER preprocessing: 0.969
+Why you think it increased, decreased, or stayed the same: 
+
+It increased because SVM maximizes the margin, if one feature is too large, it will dominate the equation, which impairs the whole performance. However after standarlization, all features now have the same influence and render better performance.
+****************************************
+Part E
+
+Best Classifier:Random Forest
+Why: It has the highest accuracy on test set after tuning. The bagging method reduces variance by using multiple trees.And it's really convenient on large dataset since you don't have to preprocess the data.
+
+
+
+
+

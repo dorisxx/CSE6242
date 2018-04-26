@@ -1,0 +1,21 @@
+1. Metrics:
+Mean Absolute Error		1656.147651
+Root Mean Squared Error		2456.983209
+Relative Absolute Error		0.276606
+Relative Squared Error		0.089608
+Coefficient of Determination	0.910392
+
+2.Metrics Without Cleaning Missing Data:
+Mean Absolute Error		2191.1593
+Root Mean Squared Error		3289.953068
+Relative Absolute Error		0.333546
+Relative Squared Error		0.146609
+Coefficient of Determination	0.853391
+Cleaning missing data is beneficial since without it all the error metrics increase except Relative Squared Error.
+
+3.Metrics Using Boosted Decision Tree Regression Model:
+Mean Absolute Error		1451.671285
+Root Mean Squared Error		2258.614346
+Relative Absolute Error		0.242455
+Relative Squared Error		0.075723
+Coefficient of Determination	0.924277
