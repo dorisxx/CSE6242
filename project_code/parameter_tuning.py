@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 
-@author: doris xiang
+@author: dorisx
 """
 import numpy as np
 from sklearn import linear_model
