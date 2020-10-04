@@ -1,5 +1,4 @@
-# CSE6242
-### Homework and project code for CSE6242 at GT
+### Homework and project code for CSE6242
 
 Project code including:
 
